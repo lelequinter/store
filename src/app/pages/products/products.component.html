@@ -1,15 +1,4 @@
 <section class="products">
-    <mat-card class="card" *ngFor="let product of products">
-        <mat-card-header>
-            <mat-card-title>{{product.name}}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            {{product.description}}
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-flat-button color="primary">Buy {{product.price | currency}} <mat-icon color="white">
-                    add_shopping_cart
-                </mat-icon></button>
-        </mat-card-actions>
-    </mat-card>
+    <!-- Pasando parametros del comp Padre al comp Hijo -->
+    <app-product [product]="product" *ngFor="let product of products"></app-product>
 </section>
