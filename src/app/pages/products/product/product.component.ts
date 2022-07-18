@@ -1,17 +1,23 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../interface/product.interface';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent implements OnInit {
   // Recibiendo los datos del comp Padre
   @Input() product!: Product;
-  constructor() { }
+  @Output() addToCartClick = new EventEmitter<Product>();
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  // Metodo creado para cuando se haga click en el boton
+  onClick(): void {
+    // console.log('Click', this.product);
+    this.addToCartClick.emit(this.product);
   }
-
 }

@@ -6,7 +6,8 @@
         {{product.description}}
     </mat-card-content>
     <mat-card-actions>
-        <button mat-flat-button color="primary">Buy {{product.price | currency}} <mat-icon color="white">
+        <button mat-flat-button color="primary" (click)="onClick()">Buy {{product.price | currency}} <mat-icon
+                color="white">
                 add_shopping_cart
             </mat-icon></button>
     </mat-card-actions>

@@ -1,4 +1,5 @@
 <section class="products">
     <!-- Pasando parametros del comp Padre al comp Hijo -->
-    <app-product [product]="product" *ngFor="let product of products"></app-product>
+    <!-- Recibimos del hijo el addToCartClick -->
+    <app-product (addToCartClick)="addToCart($event)" [product]="product" *ngFor="let product of products"></app-product>
 </section>
