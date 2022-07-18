@@ -1,19 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from '../../services/shopping-cart.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   template: ` <mat-toolbar color="primary">
     <span>My Store</span>
-    {{ quantity$ | async | json }} - Quantity {{ total$ | async | json }} -
-    Total
+    <span class="spacer"> </span>
+    <app-cart></app-cart>
   </mat-toolbar>`,
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-  quantity$ = this.shoppingCartSvc.quantityAction$;
-  total$ = this.shoppingCartSvc.totalAction$;
-  cart$ = this.shoppingCartSvc.cartAction$;
-
-  constructor(private shoppingCartSvc: ShoppingCartService) {}
-}
+export class HeaderComponent {}
