@@ -20,6 +20,9 @@ export class DataService {
   }
 
   saveDetailsOrder(details: detailsOrder): Observable<detailsOrder> {
-    return this.http.post<any>(`${this.apiURL}/detailsOrders`, details);
+    return this.http.post<detailsOrder>(
+      `${this.apiURL}/detailsOrders`,
+      details
+    );
   }
 }
