@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
   model = {
-    name: '',
+    name: 'leyder',
     store: '',
     shippingAddress: '',
     city: '',
@@ -36,5 +36,9 @@ export class CheckoutComponent implements OnInit {
 
   onPickupOrDelivery(value: boolean): void {
     console.log(value);
+  }
+
+  onSubmit(): void {
+    console.log('Submit Realizado!!');
   }
 }
