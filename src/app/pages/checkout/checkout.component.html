@@ -1,7 +1,8 @@
 <div class="container">
     <form class="form item">
         <mat-form-field class="form__element">
-            <input matInput placeholder="Name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+            <input matInput placeholder="Name" required [(ngModel)]="model.name" name="name" #name="ngModel"
+                [ngModelOptions]="{standalone: true}">
             <mat-error *ngIf="!name.valid || name.pristine">
                 Name is required
             </mat-error>
@@ -15,11 +16,12 @@
 
         <mat-form-field class="form__element">
             <input matInput placeholder="Shipping Address" [(ngModel)]="model.shippingAddress" mane="ShippingAddress"
-                #shippingAddress="ngModel">
+                #shippingAddress="ngModel" [ngModelOptions]="{standalone: true}">
         </mat-form-field>
 
         <mat-form-field class="form__element">
-            <input matInput placeholder="City" [(ngModel)]="model.city" mane="city" #city="ngModel">
+            <input matInput placeholder="City" [(ngModel)]="model.city" mane="city" #city="ngModel"
+                [ngModelOptions]="{standalone: true}">
         </mat-form-field>
 
         <mat-form-field class="form__element">
@@ -32,7 +34,7 @@
         </mat-form-field>
     </form>
 </div>
-
+<app-details></app-details>
 <div class="container__button">
     <button [disabled]="" mat-raised-button color="primary" type="submit">
         CheckOut
