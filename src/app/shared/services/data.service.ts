@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { detailsOrder, Order } from '../interface/order.interface';
 import { Store } from '../interface/stores.interface';
 
 @Injectable({
@@ -14,11 +15,11 @@ export class DataService {
     return this.http.get<Store[]>(`${this.apiURL}/stores`);
   }
 
-  saveOrder(order: any): Observable<any> {
+  saveOrder(order: Order): Observable<Order> {
     return this.http.post<any>(`${this.apiURL}/orders`, order);
   }
 
-  saveDetailsOrder(details:any) : Observable<any>{
-    return this.http.post<any>(`${this.apiURL}/detailsOrders`, details)
+  saveDetailsOrder(details: detailsOrder): Observable<detailsOrder> {
+    return this.http.post<any>(`${this.apiURL}/detailsOrders`, details);
   }
 }
