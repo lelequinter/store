@@ -40,6 +40,12 @@ export class ShoppingCartService {
     this.cartSubject.next(this.products);
   }
 
+  resetCart(): void {
+    this.cartSubject.next([]);
+    this.totalSubject.next(0);
+    this.quantitySubject.next(0);
+  }
+
   private quantityProducts(): void {
     const quantity = this.products.reduce((acc, prod) => (acc += prod.qty), 0);
     this.quantitySubject.next(quantity);

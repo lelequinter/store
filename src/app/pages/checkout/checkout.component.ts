@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { switchMap, tap } from 'rxjs';
+import { delay, switchMap, tap } from 'rxjs';
 import { Details, Order } from 'src/app/shared/interface/order.interface';
 import { Store } from 'src/app/shared/interface/stores.interface';
 import { DataService } from 'src/app/shared/services/data.service';
@@ -48,7 +48,7 @@ export class CheckoutComponent implements OnInit {
     const data: Order = {
       ...formData,
       date: this.getCurrentDate(),
-      pickUp: this.isDelivery,
+      isDelivery: this.isDelivery,
     };
     this.dataSvc
       .saveOrder(data)
@@ -58,7 +58,9 @@ export class CheckoutComponent implements OnInit {
           const details = this.prepareDetails();
           return this.dataSvc.saveDetailsOrder({ details, orderId });
         }),
-        tap(() => this.router.navigate(['/checkout/thank-you-page']))
+        tap(() => this.router.navigate(['/checkout/thank-you-page'])),
+        delay(2000),
+        tap(() => this.shoppingCartSvc.resetCart())
       )
       .subscribe();
   }

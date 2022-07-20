@@ -9,8 +9,9 @@
 
         <mat-radio-group class="form__element">
             <p>Choose an option:</p>
-            <mat-radio-button value="pickup" (change)="onPickupOrDelivery(true)" checked="">Pickup</mat-radio-button>
-            <mat-radio-button value="delivery" (change)="onPickupOrDelivery(false)">Delivery</mat-radio-button>
+            <mat-radio-button value="pickup" (change)="onPickupOrDelivery(false)">Pickup</mat-radio-button>
+            <mat-radio-button value="delivery" (change)="onPickupOrDelivery(true)" checked="">Delivery
+            </mat-radio-button>
         </mat-radio-group>
 
         <ng-container *ngIf="isDelivery; else showStores">
@@ -39,7 +40,8 @@
 </div>
 <app-details></app-details>
 <div class="container__button">
-    <button [disabled]="!checkoutForm.form.valid" mat-raised-button color="primary" type="submit" (click)="onSubmit(checkoutForm)">
+    <button [disabled]="!checkoutForm.form.valid" mat-raised-button color="primary" type="submit"
+        (click)="onSubmit(checkoutForm)">
         CheckOut
     </button>
 </div>

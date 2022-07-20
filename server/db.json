@@ -153,6 +153,40 @@
       "date": "19/7/2022",
       "pickUp": true,
       "id": 4
+    },
+    {
+      "name": "leyder",
+      "store": {
+        "id": 2,
+        "name": "Store Alcalá",
+        "address": "Calle de Alcalá, 21",
+        "city": "Madrid",
+        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
+      },
+      "date": "19/7/2022",
+      "pickUp": false,
+      "id": 5
+    },
+    {
+      "name": "Leyder",
+      "ShippingAddress": "cra 18a #28-30",
+      "city": "Valledupar",
+      "date": "19/7/2022",
+      "isDelivery": true,
+      "id": 6
+    },
+    {
+      "name": "leyder",
+      "store": {
+        "id": 3,
+        "name": "Chambers and West Broadway",
+        "address": "125 Chambers Street",
+        "city": "New York",
+        "openingHours": "10:00 - 14:00 and 17:00 - 20:30"
+      },
+      "date": "19/7/2022",
+      "isDelivery": false,
+      "id": 7
     }
   ],
   "detailsOrders": [
@@ -193,6 +227,64 @@
       ],
       "orderId": 4,
       "id": 4
+    },
+    {
+      "details": [
+        {
+          "productId": 1,
+          "productName": "Essential TypeScript 4: From Beginner to Pro",
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Hackeando el cerebro de tus compradores: PsychoGrowth",
+          "quantity": 1
+        },
+        {
+          "productId": 4,
+          "productName": "SanDisk 128GB Ultra MicroSDXC UHS-I Memory Card with Adapter",
+          "quantity": 1
+        }
+      ],
+      "orderId": 5,
+      "id": 5
+    },
+    {
+      "details": [
+        {
+          "productId": 1,
+          "productName": "Essential TypeScript 4: From Beginner to Pro",
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Hackeando el cerebro de tus compradores: PsychoGrowth",
+          "quantity": 1
+        }
+      ],
+      "orderId": 6,
+      "id": 6
+    },
+    {
+      "details": [
+        {
+          "productId": 1,
+          "productName": "Essential TypeScript 4: From Beginner to Pro",
+          "quantity": 2
+        },
+        {
+          "productId": 2,
+          "productName": "Hackeando el cerebro de tus compradores: PsychoGrowth",
+          "quantity": 2
+        },
+        {
+          "productId": 4,
+          "productName": "SanDisk 128GB Ultra MicroSDXC UHS-I Memory Card with Adapter",
+          "quantity": 1
+        }
+      ],
+      "orderId": 7,
+      "id": 7
     }
   ]
 }
