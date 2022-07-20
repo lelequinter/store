@@ -145,6 +145,14 @@
       "date": "19/7/2022",
       "pickUp": true,
       "id": 3
+    },
+    {
+      "name": "Leyder",
+      "ShippingAddress": "cra 18a #28-30",
+      "city": "Valledupar",
+      "date": "19/7/2022",
+      "pickUp": true,
+      "id": 4
     }
   ],
   "detailsOrders": [
@@ -174,6 +182,17 @@
       ],
       "orderId": 3,
       "id": 3
+    },
+    {
+      "details": [
+        {
+          "productId": 2,
+          "productName": "Hackeando el cerebro de tus compradores: PsychoGrowth",
+          "quantity": 2
+        }
+      ],
+      "orderId": 4,
+      "id": 4
     }
   ]
 }
